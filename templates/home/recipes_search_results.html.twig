@@ -1,0 +1,16 @@
+{% for recipe in recipes %}
+    <div class="recipe">
+        <div class="recipe-image"><img src="{{ recipe.image }}" width="200" height="200"/></div>
+        <div class="recipe-title"><strong>{{ recipe.title }}</strong></div>
+        <div class="recipe-cook-time">cook time: {{ recipe.cookTime }} minutes</div>
+        <div class="recipe-prep-time">prep time: {{ recipe.prepTime }} minutes</div>
+        <div class="recipe-ratings">ratings: {{ recipe.ratings }}</div>
+        <div class="recipe-category">category: {{ recipe.category }}</div>
+        <div class="recipe-author">author: {{ recipe.author }}</div>
+        <p>ingridients:</p>
+        {% for ingridient in  recipe.getRecipeIngridients %}
+            {{ ingridient.ingridient }} <br/>
+        {% endfor %}
+        </p>
+    </div>
+{% endfor %}

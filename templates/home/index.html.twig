@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block css %}
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>       
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+  <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block javascript %}
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="wrap">
+   <div class="logo">
+      <img src="{{ asset('images/dinnertime-high-resolution-logo-transparent.png')}}" height=100 width=400/> 
+   </div>
+   <div class="search">
+      <input type="text" class="searchTerm search-ingridients" placeholder="ingridients">
+      <button type="submit" class="searchButton">Search</button>
+   </div>
+</div>
+   <div class="recipes">
+   </div>
+{% endblock %}
